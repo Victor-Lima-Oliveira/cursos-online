@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:foregroundGravity="left"
+    android:foregroundTint="@color/themeNight"
+    android:foregroundTintMode="multiply"
+    android:orientation="vertical"
+    tools:context="activities.AlteracaoActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="5dp">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/my_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/themeNight"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:title="Dados do curso"
+                    app:titleMarginStart="130dp"
+                    app:titleTextColor="@color/white" />
+
+                <ImageView
+                    android:id="@+id/IMGvoltar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_arrow"
+                    android:layout_marginLeft="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/my_toolbar"
+                    app:layout_constraintStart_toStartOf="@id/my_toolbar"
+                    app:layout_constraintTop_toTopOf="@id/my_toolbar" />
+                <ImageView
+                    android:id="@+id/IMGexcluir"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ico_delete"
+                    android:layout_marginRight="5dp"
+                    app:layout_constraintBottom_toBottomOf="@id/my_toolbar"
+                    app:layout_constraintEnd_toEndOf="@id/my_toolbar"
+                    app:layout_constraintTop_toTopOf="@id/my_toolbar" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.appbar.AppBarLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:text="Nome do curso: "
+        android:textSize="20dp"
+        android:layout_marginStart="5dp"/>
+
+    <EditText
+        android:id="@+id/EDTnomeDoCursoAlt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:hint="Digite o nome aqui"
+        android:layout_marginStart="5dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="Duração em meses:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/EDTduracaoDoCursoAlt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:hint="Digite os meses aqui"
+        android:inputType="number" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="15dp"
+        android:text="Preço do curso:"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/EDTvalorDoCursoAlt"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_marginStart="5dp"
+        android:hint="Digite o preço aqui"
+        android:inputType="numberDecimal" />
+
+    <Button
+        android:id="@+id/BTNalterarCurso"
+        android:layout_width="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_height="48dp"
+        android:text="Alterar Curso"
+        android:textColor="@color/white"
+        android:backgroundTint="@color/themeNight"/>
+
+</LinearLayout>
